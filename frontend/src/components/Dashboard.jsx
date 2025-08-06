@@ -5,7 +5,7 @@ import AdvancedFilterModal from './AdvancedFilterModal';
 import './Dashboard.css';
 
 // Set API base URL for local development. For production, use the Render URL.
-const API_BASE_URL = 'http://localhost:5000'; // Change to 'https://interface-monitoring-app.onrender.com' for production
+const API_BASE_URL = 'https://interface-monitoring-app.onrender.com'; // Change to 'https://interface-monitoring-app.onrender.com' for production
 
 const Dashboard = () => {
   const [summary, setSummary] = useState(null);
