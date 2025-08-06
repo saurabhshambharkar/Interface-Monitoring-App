@@ -107,7 +107,7 @@ Driftal/
    ```bash
    # Create .env file in backend directory
    PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/interface-monitor
+   MONGODB_URI=https://interface-monitoring-app.onrender.com
    NODE_ENV=development
    ```
 

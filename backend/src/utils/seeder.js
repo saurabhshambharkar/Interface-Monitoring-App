@@ -140,7 +140,7 @@ async function seedData(count = 500000) {
 // If this file is run directly
 if (require.main === module) {
   // Connect to MongoDB
-  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/interface-monitor', {
+  mongoose.connect(process.env.MONGODB_URI || 'https://interface-monitoring-app.onrender.com', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

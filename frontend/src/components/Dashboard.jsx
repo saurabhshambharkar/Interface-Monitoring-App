@@ -4,7 +4,7 @@ import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Toolti
 import AdvancedFilterModal from './AdvancedFilterModal';
 import './Dashboard.css';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://interface-monitoring-app.onrender.com';
 
 const Dashboard = () => {
   const [summary, setSummary] = useState(null);

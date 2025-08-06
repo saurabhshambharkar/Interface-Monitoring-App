@@ -1,6 +1,7 @@
 const Interface = require('../models/Interface');
 
-// Get all interfaces with filtering, pagination, and sorting
+// Get all interfaces with filtering, pagination,
+// also sorting
 exports.getInterfaces = async (req, res) => {
   try {
     const {
@@ -42,7 +43,7 @@ exports.getInterfaces = async (req, res) => {
     // Calculate pagination
     const skip = (parseInt(page) - 1) * parseInt(limit);
 
-    // Execute query with pagination
+    // Execute query with pagination etc
     const interfaces = await Interface.find(filter)
       .sort(sort)
       .skip(skip)
