@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'https://interface-monitoring-app.onrender.com', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/interface-monitoring', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

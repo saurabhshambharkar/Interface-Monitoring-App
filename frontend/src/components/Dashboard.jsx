@@ -4,7 +4,8 @@ import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Toolti
 import AdvancedFilterModal from './AdvancedFilterModal';
 import './Dashboard.css';
 
-const API_BASE_URL = 'https://interface-monitoring-app.onrender.com';
+// Set API base URL for local development. For production, use the Render URL.
+const API_BASE_URL = 'http://localhost:5000'; // Change to 'https://interface-monitoring-app.onrender.com' for production
 
 const Dashboard = () => {
   const [summary, setSummary] = useState(null);
@@ -32,7 +33,7 @@ const Dashboard = () => {
 
   const fetchSummary = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/interfaces/summary?timeRange=${timeRange}`);
+      const response = await axios.get(`${API_BASE_URL}/api/interfaces/summary?timeRange=${timeRange}`);
       setSummary(response.data);
     } catch (error) {
       console.error('Error fetching summary:', error);
@@ -42,7 +43,7 @@ const Dashboard = () => {
   const fetchInterfaces = async (page = 1, filterObj = appliedFilters) => {
     try {
       setLoading(true);
-      let url = `${API_BASE_URL}/interfaces?page=${page}&limit=50&timeRange=${timeRange}`;
+      let url = `${API_BASE_URL}/api/interfaces?page=${page}&limit=50&timeRange=${timeRange}`;
       if (filterObj.status) url += `&status=${filterObj.status}`;
       if (filterObj.severity) url += `&severity=${filterObj.severity}`;
       if (filterObj.keyword) url += `&integrationKey=${encodeURIComponent(filterObj.keyword)}&message=${encodeURIComponent(filterObj.keyword)}`;

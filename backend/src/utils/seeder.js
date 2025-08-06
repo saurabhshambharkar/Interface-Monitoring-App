@@ -1,5 +1,6 @@
 const Interface = require('../models/Interface');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const interfaceNames = [
   'Employee Data Sync',
@@ -97,7 +98,7 @@ function generateMockInterface() {
   };
 }
 
-async function seedData(count = 500000) {
+async function seedData(count = 10000) {
   try {
     console.log('Starting data seeding...');
     
@@ -139,14 +140,15 @@ async function seedData(count = 500000) {
 
 // If this file is run directly
 if (require.main === module) {
-  // Connect to MongoDB
-  mongoose.connect(process.env.MONGODB_URI || 'https://interface-monitoring-app.onrender.com', {
+  // Use the provided MongoDB Atlas URI from .env or fallback to the given URI
+  const mongoUri = process.env.MONGODB_URI || 'mongodb+srv://saurabh03105:Saurabh31@cluster0.8tta9sk.mongodb.net/interfacedb?retryWrites=true&w=majority&appName=Cluster0';
+  mongoose.connect(mongoUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
     console.log('Connected to MongoDB');
-    return seedData(1000); // Start with 1000 records for testing
+    return seedData(10000); // Generate 10,000 records as requested
   })
   .then(() => {
     console.log('Seeding completed');
