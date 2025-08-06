@@ -36,6 +36,28 @@ A modern, real-time monitoring dashboard for HR integration interfaces built wit
 - **Mongoose** - MongoDB object modeling
 - **CORS** - Cross-origin resource sharing
 
+### Screenshots
+Here are a few screenshots showcasing the dashboard interface and features in action.
+
+# Dashboard
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6e6deaf0-a809-413a-86a3-e36ebc4ae0f2" />
+
+# Dashboard Metrics Overview
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b5fa7cd1-5c79-4ef1-946d-b88c11e37706" />
+
+# Interface Statistics
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f4805b63-4416-4e00-9336-e4f2dcddf51d" />
+
+# Severity Distribution Graph
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/219f77e3-6b00-4b5e-ad48-4a5626ad8dd2" />
+
+# Interface Logs
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/83f957ae-245b-4fc6-b0f8-1d9b052d206b" />
+
+# Advanced Filters
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b7185696-cccd-4110-a707-90df3168248d" />
+
+
 ## 📁 Project Structure
 
 ```
